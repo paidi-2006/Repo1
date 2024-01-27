@@ -8,7 +8,7 @@ stages {
 	
 	stage('build') {
 		 //Maven or Gradle
-		mvn clean package
+		//mvn clean package
 		
 		//dotnet build
 		
