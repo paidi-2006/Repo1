@@ -1,0 +1,58 @@
+pipeline{
+	agent any
+
+stages {
+	stage('checkout') {
+		// git checkout
+	}
+	
+	stage('build') {
+		 //Maven or Gradle
+		mvn clean package
+		
+		//dotnet build
+		
+		//npm build
+	}
+	
+	stage('test'){
+		
+		//mvn test
+		//dotnet test
+	}
+	
+	stage ('scan code'){
+			//sonarqube // url // credentials
+	
+	}
+	
+	stage ('quality'){
+			// if quality gate : fail , abort pipeline
+	
+	}
+	
+	stage ('artifactory'){
+			// jfog // url // credentials
+	
+	}
+	
+	stage('dev') {
+			// connection to development server
+			
+			// publish -> CLI (AWS CLI, Azure CLI, Plugins)
+	}
+	
+	
+	stage('test artifactory'){
+	
+	}
+	
+	stage('stage artifactory'){
+	
+	}
+	
+	stage('prod artifactory'){
+	
+	} 
+}
+}
